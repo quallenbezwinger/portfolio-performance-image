@@ -17,7 +17,6 @@ RUN \
         libwebkit2gtk-4.0-37 
 
 RUN \
-	sed -i '1s;^;-configuration\n/opt/portfolio/configuration\n-data\n/opt/portfolio/workspace\n;' /opt/portfolio/PortfolioPerformance.ini && \
 	echo "osgi.nl=de" >> /opt/portfolio/configuration/config.ini && \
 	chmod -R 777 /opt/portfolio && \
     install_app_icon.sh "$APP_ICON_URL"

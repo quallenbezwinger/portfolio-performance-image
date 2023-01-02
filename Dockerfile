@@ -1,7 +1,7 @@
 # Pull base image.
 FROM jlesage/baseimage-gui:debian-11
 
-ENV VERSION 0.60.0
+ENV VERSION 0.60.1
 ENV ARCHIVE https://github.com/buchen/portfolio/releases/download/${VERSION}/PortfolioPerformance-${VERSION}-linux.gtk.x86_64.tar.gz
 ENV APP_ICON_URL=https://www.portfolio-performance.info/images/logo.png
 	

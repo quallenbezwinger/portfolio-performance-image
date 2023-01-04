@@ -17,7 +17,10 @@ RUN \
         libwebkit2gtk-4.0-37 
 
 RUN \
-	echo "osgi.nl=en" >> /opt/portfolio/configuration/config.ini && \
+    # Write config entry for new data folder, cause otherwise pp would try to write in /dev which is not possible
+    echo "-data\n/config/portfolio\n$(cat /opt/portfolio/PortfolioPerformance.ini)" > /opt/portfolio/PortfolioPerformance.ini && \
+	# Set initial language to english
+    echo "osgi.nl=en" >> /opt/portfolio/configuration/config.ini && \
 	chmod -R 777 /opt/portfolio && \
     install_app_icon.sh "$APP_ICON_URL"
 

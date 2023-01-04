@@ -7,8 +7,10 @@ The GUI of the application is accessed through a modern web browser (no installa
 This container is using [jlesage/baseimage-gui](https://hub.docker.com/r/jlesage/baseimage-gui) as baseimage.
 
 ## Mount
-You have to mount /opt/portfolio/workspace to be able to get access or upload your Portfolio Performance files.
-
+### Personal portfolio files
+You have to mount /opt/portfolio/workspace to be able to get access and/or upload your Portfolio Performance files.
+### Configugration
+You have to mount /config to persist you settings.
 ## Environment Variables
 The following public environment variables are provided by the baseimage:
 
@@ -59,8 +61,9 @@ services:
     ports:
       - 5800:5800
     volumes:
-      - /mnt/portfolio:/opt/portfolio/workspace
+      - /mnt/portfolio/workspace:/opt/portfolio/workspace
+      - /mnt/portfolio/config:/config
     environment:
-      USER_ID: 0
-      GROUP_ID: 0
+      USER_ID: 1000
+      GROUP_ID: 1000
       TZ: "Europe/Berlin" 

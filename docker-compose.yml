@@ -7,8 +7,8 @@ services:
     ports:
       - 5800:5800
     volumes:
-      - /home/dkoehler/docker-volumes/pp/config:/config
-      - /home/dkoehler/docker-volumes/pp/workspace:/opt/portfolio/workspace
+      - /home/dkoehler/development/docker-volumes/pp/config:/config
+      - /home/dkoehler/development/docker-volumes/pp/workspace:/opt/portfolio/workspace
     environment:
       USER_ID: 1000
       GROUP_ID: 1000

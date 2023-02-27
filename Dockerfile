@@ -1,7 +1,7 @@
 # Pull base image.
 FROM jlesage/baseimage-gui:debian-11
 
-ENV VERSION 0.60.1
+ENV VERSION 0.61.3
 ENV ARCHIVE https://github.com/buchen/portfolio/releases/download/${VERSION}/PortfolioPerformance-${VERSION}-linux.gtk.x86_64.tar.gz
 ENV APP_ICON_URL=https://www.portfolio-performance.info/images/logo.png
 	
@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y wget && \
 # Install dependencies.
 RUN \
     apt-get install -y \
-        openjdk-11-jre \
+        openjdk-17-jre \
         libwebkit2gtk-4.0-37 
 
 RUN \

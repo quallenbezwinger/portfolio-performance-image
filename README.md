@@ -55,15 +55,18 @@ be given the container.
 version: "3"
 services:
   portfolio-performance:
-    image: quallenbezwinger/portfolio-performance:latest
+    image: quallenbezwinger/portfolio-performance:0.7
     container_name: portfolio
     restart: unless-stopped
     ports:
       - 5800:5800
     volumes:
-      - /mnt/portfolio/workspace:/opt/portfolio/workspace
-      - /mnt/portfolio/config:/config
+      - /opt/docker-volumes/pp/config:/config
+      - /opt/docker-volumes/pp/workspace:/opt/portfolio/workspace
     environment:
       USER_ID: 1000
       GROUP_ID: 1000
+      DISPLAY_WIDTH: 1920
+      DISPLAY_HEIGHT: 1080
       TZ: "Europe/Berlin" 
+

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CONTAINER_VERSION="0.7"
+CONTAINER_VERSION="0.8"
 
 docker build . -t quallenbezwinger/portfolio-performance:$CONTAINER_VERSION
 docker build . -t quallenbezwinger/portfolio-performance:latest

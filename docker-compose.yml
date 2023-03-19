@@ -1,7 +1,7 @@
 version: "3"
 services:
   portfolio-performance:
-    image: quallenbezwinger/portfolio-performance:0.7
+    image: quallenbezwinger/portfolio-performance:0.8
     container_name: portfolio
     restart: unless-stopped
     ports:
